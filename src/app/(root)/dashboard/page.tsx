@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import DashboardCards from "@/components/dashboard/DashboardCards";
 import IncomingApplication from "@/components/dashboard/IncomingApplication";
 import UpcomingActions from "@/components/dashboard/UpcomingActions";
+import PerformanceReport from "@/components/dashboard/PerformanceReport";
 
 
 export default function page() {
@@ -24,12 +25,14 @@ export default function page() {
         </div>
       </div>
 
-      <div className="flex justify-between gap-2">
-        <div>
+      <div className="flex justify-between gap-6 flex-col md:flex-row">
+        <div className="flex-1 space-y-6">
           <DashboardCards />
-          {/* <PerformanceReport/> */}
+          <PerformanceReport/>
         </div>
-        <UpcomingActions/>
+        <div>
+          <UpcomingActions/>
+        </div>
       </div>
 
       <IncomingApplication/>

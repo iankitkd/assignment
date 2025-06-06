@@ -5,7 +5,7 @@ export default function DashboardCards() {
   const CustomCard = "border border-border/30 rounded-lg bg-white shadow-md";
 
   return (
-    <div className='flex flex-wrap flex-row gap-4'>
+    <div className='flex flex-wrap flex-row md:justify-between gap-2'>
       {/* Employees */}
       <div className={`w-56 px-3 py-2 ${CustomCard}`}>
         <div className='flex items-center justify-between'>
