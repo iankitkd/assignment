@@ -9,6 +9,7 @@ export default function SignupPage() {
           <img
             src="/signupImage.jpg"
             alt="Team working"
+            loading="lazy"
             className="h-full w-full object-cover"
           />
         </div>

@@ -10,7 +10,7 @@ export default function DashboardCards() {
       <div className={`w-56 px-3 py-2 ${CustomCard}`}>
         <div className='flex items-center justify-between'>
           <p className='font-medium text-xl'>Employees</p>
-          <span className='bg-[#EED3EF] rounded-full w-8 h-8 flex items-center justify-center'><img src={'/employees-icon.svg'} /></span>
+          <span className='bg-[#EED3EF] rounded-full w-8 h-8 flex items-center justify-center'><img src={'/employees-icon.svg'} loading="lazy" /></span>
         </div>
 
         <div className='text-2xl font-semibold pb-2'>
@@ -27,7 +27,7 @@ export default function DashboardCards() {
       <div className={`w-56 px-3 py-2 ${CustomCard}`}>
         <div className='flex items-center justify-between'>
           <p className='font-medium text-xl'>Hiring</p>
-          <span className='bg-[#D3E3EF] rounded-full w-8 h-8 flex items-center justify-center'><img src={'/hiring-icon.svg'} /></span>
+          <span className='bg-[#D3E3EF] rounded-full w-8 h-8 flex items-center justify-center'><img src={'/hiring-icon.svg'} loading="lazy" /></span>
         </div>
 
         <div className='text-2xl font-semibold pb-2'>
@@ -44,7 +44,7 @@ export default function DashboardCards() {
       <div className={`w-56 px-3 py-2 ${CustomCard}`}>
         <div className='flex items-center justify-between'>
           <p className='font-medium text-xl'>Projects</p>
-          <span className='bg-[#E3EFD3] rounded-full w-8 h-8 flex items-center justify-center'><img src={'/project-icon.svg'} /></span>
+          <span className='bg-[#E3EFD3] rounded-full w-8 h-8 flex items-center justify-center'><img src={'/project-icon.svg'} loading="lazy" /></span>
         </div>
 
         <div className='text-2xl font-semibold pb-2'>
