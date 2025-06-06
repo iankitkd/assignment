@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // signup form Zod schema
 const signupSchema = z.object({
@@ -24,6 +25,7 @@ const signupSchema = z.object({
 type SignupFormValues = z.infer<typeof signupSchema>;
 
 export default function SignupForm() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -34,10 +36,11 @@ export default function SignupForm() {
 
   const onSubmit = (data: SignupFormValues) => {
     console.log("Form Data", data);
+    router.push('/dashboard');
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full px-14 py-2 bg-gradient-to-br from-top-color via-middle-color to-bottom-color">
+    <div className="flex flex-col justify-center items-center w-full px-4 md:px-14 py-2 bg-gradient-to-br from-top-color via-middle-color to-bottom-color">
       <img src="/logo.png" alt="Gigfloww Logo" className="w-32 filter invert hue-rotate-180" />
       <h1 className="text-2xl font-medium mb-4">Welcome to Gigfloww</h1>
       <p className="text-3xl font-medium text-secondary">Register</p>
@@ -115,7 +118,7 @@ export default function SignupForm() {
         </Link>
       </p>
 
-      <div className="flex justify-around w-full mt-6">
+      <div className="flex flex-col md:flex-row justify-around gap-2 w-full mt-6">
         <button className="flex items-center justify-center gap-2 border border-border rounded-full p-2 hover:bg-gray-50 transition">
           <Image src="/google.svg" alt="Google Icon" height={32} width={32} />
           Register with Google

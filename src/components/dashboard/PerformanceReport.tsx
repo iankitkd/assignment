@@ -21,7 +21,11 @@ export default function PerformanceReport() {
         </button>
       </div>
 
-      <MyAreaChart data={data} />
+      <div className='w-full overflow-x-auto'>
+        <div className='min-w-[600px]'>
+          <MyAreaChart data={data} />
+        </div>
+      </div>
     </div>
   )
 }

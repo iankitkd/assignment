@@ -4,12 +4,12 @@ import ApplicationCard from './ApplicationCard';
 import { applications } from '@/data/applications';
 
 export default function IncomingApplication() {
-  const CustomBorder = "border border-border/50 rounded-xl";
+  const CustomBorder = "border border-border/50 rounded-lg";
   const BGGradient = "bg-gradient-to-r from-left-color to-right-color text-white";
 
   return (
     <div className={`p-4 mt-8 ${CustomBorder}`}>
-      <div className='flex justify-between items-start'>
+      <div className='flex flex-col md:flex-row justify-between items-start gap-2'>
         <div>
           <h2 className='font-semibold text-xl'>Incoming Application</h2>
           <p>Manage application for your job posting</p>
